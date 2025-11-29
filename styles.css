@@ -1,0 +1,374 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Header & nav */
+
+header {
+  background: #0d6efd;
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+nav a {
+  font-size: 0.9rem;
+  color: #e6f0ff;
+  text-decoration: none;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Layout */
+
+main {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Disclaimer box */
+
+.disclaimer-box {
+  background: #fff7d1;
+  border-left: 4px solid #f0c419;
+  padding: 1rem;
+  margin: 1.5rem auto 0;
+  max-width: 900px;
+  color: #444;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.disclaimer-box ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+/* Chevron timeline */
+
+/* Chevron timeline */
+
+#timeline-section {
+  margin-top: 2rem;
+}
+
+.chevron-row {
+  display: flex;
+  margin-top: 1.5rem;
+  overflow-x: visible;           /* no scrolling needed now */
+  padding-bottom: 0.5rem;
+  gap: 8px;
+}
+
+.chevron {
+  position: relative;
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0d6efd;
+  /* slightly shorter arrow tip */
+  clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.chevron:last-child {
+  /* last one still arrowed, but softer tip */
+  clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+}
+
+.chevron-dots {
+  position: relative;
+  height: 260px;      /* keep tall for stacking */
+  margin-top: 0.4rem; /* closer to the chevrons */
+}
+
+
+
+.chevron-dot-wrapper {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.7rem;
+  color: #333;
+}
+
+.chevron-dot {
+  width: 16px;
+  height: 16px;
+  background: #0d6efd;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin: 0 auto 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.chevron-label {
+  white-space: nowrap;
+}
+
+
+/* Progress thermometer */
+
+#progress-section {
+  margin-top: 2.5rem;
+}
+
+.progress-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.thermometer {
+  width: 60px;
+  height: 180px;
+  border-radius: 999px;
+  border: 2px solid #0d6efd;
+  padding: 4px;
+  display: flex;
+  align-items: flex-end;
+  background: #f0f3ff;
+}
+
+.thermometer-fill {
+  width: 100%;
+  border-radius: 999px;
+  background: #0d6efd;
+  height: 0;
+  transition: height 0.6s ease-out;
+}
+
+#progress-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+#progress-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Cure list & cards */
+
+#cure-visualization {
+  margin-top: 2.5rem;
+}
+
+#cure-list {
+  margin-top: 1.25rem;
+}
+
+/* Pathway headers */
+.pathway-section {
+  margin-top: 2rem;
+}
+
+.pathway-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;       /* center the pathway titles */
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+/* Card layout */
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;               /* extra spacing between cards */
+}
+
+.cure-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;   /* more breathing room */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;               /* vertical spacing between lines */
+}
+
+/* Company / study name */
+.cure-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.35;
+}
+
+/* Make the years-away very noticeable */
+.cure-years {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-top: 0.2rem;
+}
+
+/* Phase / completion line */
+.cure-stage {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Description text */
+.cure-notes {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ClinicalTrials.gov link */
+.cure-link {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cure-link:hover {
+  text-decoration: underline;
+}
+
+/* Cure cards layout */
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;               /* more spacing */
+}
+
+.cure-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;   /* more breathing room */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;               /* consistent spacing */
+}
+
+/* Make years-away the most noticeable */
+.cure-years {
+  font-size: 1.2rem;         /* bigger */
+  font-weight: 700;          /* bold */
+  color: #0d6efd;
+  margin-top: 0.4rem;
+}
+
+/* Company/project name formatting */
+.cure-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.35;
+}
+
+/* Clinical stage */
+.cure-stage {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Notes */
+.cure-notes {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ClinicalTrials.gov link */
+.cure-link {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cure-link:hover {
+  text-decoration: underline;
+}
+
+
+/* For families section */
+
+#for-families {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d5d9e6;
+}
+
+#for-families ul {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.for-families-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.fine-print {
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 900px;
+  margin-top: 0.4rem;
+}
+
